@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!--  xml을 로딩할 때 자동으로 객체 생성  -->
+    <!--  id값이 없어도 자동주입을 통해 객체의 주소값을 받을수는 있음  -->
+    <bean class="beans.TestBean"/>
+    <bean id="test1" class="beans.TestBean"/>
+
+    <bean class="beans.TestBean" lazy-init="true"/>
+
+    <!-- prototype, singleton(default)   -->
+    <!-- prototype은 getBean할 때 마다 계속 객체를 생성    -->
+    <bean id="test3" class="beans.TestBean" scope="prototype"/>
+</beans>
+
