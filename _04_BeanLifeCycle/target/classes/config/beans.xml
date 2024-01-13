@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+
+       default-init-method="default_init"
+       default-destroy-method="default_destroy"
+>
+        <bean id="test1" class="beans.TestBean" lazy-init="true" init-method="bean1_init" destroy-method="bean1_destroy"/>
+        <bean id="test2" class="beans.TestBean2" lazy-init="true"/>
+</beans>
+
